@@ -14,7 +14,7 @@ const MenuButton = () => {
           <m.span
             initial={{ display: 'none', opacity: 0 }}
             animate={{ display: isOpen ? 'block' : 'none', opacity: isOpen ? 1 : 0 }}
-            transition={{ delay: 0.3, duration: 0.3 }}
+            transition={{ delay: 0.3, duration: 1 }}
           >Close</m.span>
         </button>
       )
