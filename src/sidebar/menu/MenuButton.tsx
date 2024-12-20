@@ -11,13 +11,17 @@ const MenuButton = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}>
           <PanelLeftClose />
-          <span>Close</span>
+          <m.span
+            initial={{ display: 'none', opacity: 0 }}
+            animate={{ display: isOpen ? 'block' : 'none', opacity: isOpen ? 1 : 0 }}
+            transition={{ delay: 0.3, duration: 0.3 }}
+          >Close</m.span>
         </button>
       )
     case false:
       return (
         <m.button
-          animate={{ color: ["#ff0000", "#ffffff"] }}
+          animate={{ color: ["#ff0000", "#000000"] }}
           transition={{ duration: 3, ease: "linear", repeat: Infinity }}
           onClick={() => setIsOpen(!isOpen)}>
           <PanelLeftOpen />
